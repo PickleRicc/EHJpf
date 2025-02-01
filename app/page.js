@@ -1,5 +1,6 @@
 import Navigation from '../components/Navigation'
 import ProjectCard from '../components/ProjectCard'
+import TypeWriter from '../components/TypeWriter'
 
 export default function Home() {
   return (
@@ -9,20 +10,33 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight animate-fade-in">
             Hi, I'm <span className="highlight">Eric</span>
           </h1>
-          <h2 className="text-2xl md:text-4xl mb-8 text-gray-300">
-            Designer & Developer
+          <h2 className="text-2xl md:text-4xl mb-8 text-gray-300 animate-fade-in delay-200">
+            <TypeWriter 
+              words={[
+                "Designer & Developer",
+                "Frontend Engineer",
+                "UI/UX Enthusiast",
+                "Creative Coder"
+              ]} 
+              speed={100}
+              delay={2000}
+            />
           </h2>
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto animate-fade-in delay-400">
             I create beautiful and functional digital experiences
           </p>
-          <div className="flex gap-4 justify-center">
-            <a href="#projects" className="button">
+          <div className="flex gap-4 justify-center animate-fade-in delay-600">
+            <a href="#projects" className="button animate-float">
               View My Work
             </a>
-            <a href="#contact" className="border border-[var(--primary)] text-[var(--primary)] px-6 py-3 rounded-full hover:bg-[var(--primary)]/10 transition-all duration-300">
+            <a 
+              href="mailto:ericharrison1121@gmail.com?subject=Portfolio%20Contact&body=Hi%20Eric,%0D%0A%0D%0AI%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" 
+              className="border border-[var(--primary)] text-[var(--primary)] px-6 py-3 rounded-full hover:bg-[var(--primary)]/10 transition-all duration-300 animate-float" 
+              style={{ animationDelay: '200ms' }}
+            >
               Contact Me
             </a>
           </div>
